@@ -1,5 +1,5 @@
 import './App.css';
-import TodoWraper from './components/TodoWraper';
+import TodoWraper from './component/TodoWraper';
 // import  TodoWraper  from './components/TodoWraper';
 
 
