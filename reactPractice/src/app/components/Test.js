@@ -6,6 +6,8 @@ export default function Test() {
   const [showMore, setShowMore] = useState(false);
   const hasNext = index < sculptureList.length - 1;
 
+
+
   function handleNextClick() {
     if (hasNext) {
       setIndex(index + 1);
@@ -19,6 +21,7 @@ export default function Test() {
   }
 
   let sculpture = sculptureList[index];
+  
   return (
     <>
       <button onClick={handleNextClick}>
