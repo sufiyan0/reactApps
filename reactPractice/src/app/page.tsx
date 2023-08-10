@@ -1,12 +1,14 @@
 'use client'
-import Test from './components/Test'
+import ComponentMemory from './components/ComponentMemory'
+import State from './components/state'
 
 
 
 export default function Home() {
   return (
     <>
-    <Test/>
+    {/* <ComponentMemory/> */}
+    <State/>
     </>
   )
 }

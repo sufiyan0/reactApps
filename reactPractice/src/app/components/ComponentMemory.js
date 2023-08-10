@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { sculptureList } from './data.js';
 
-export default function Test() {
+export default function ComponentMemory() {
   const [index, setIndex] = useState(0);
   const [showMore, setShowMore] = useState(false);
   const hasNext = index < sculptureList.length - 1;
@@ -24,9 +24,10 @@ export default function Test() {
   
   return (
     <>
-      <button onClick={handleNextClick}>
+      <button onClick={handleNextClick} className='button'>
         Next
       </button>
+      
       <h2>
         <i>{sculpture.name} </i>
         by {sculpture.artist}
@@ -34,7 +35,7 @@ export default function Test() {
       <h3>
         ({index + 1} of {sculptureList.length})
       </h3>
-      <button onClick={handleMoreClick}>
+      <button onClick={handleMoreClick} className='button'>
         {showMore ? 'Hide' : 'Show'} details
       </button>
       {showMore && <p>{sculpture.description}</p>}
