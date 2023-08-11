@@ -1,6 +1,7 @@
 'use client'
 import ComponentMemory from './components/ComponentMemory'
-import State from './components/state'
+import ObjectStateUpdate from './components/ObjectStateUpdate'
+// import State from './components/State'
 import  UpdaterFunction from './components/UpdaterFunction'
 
 
@@ -9,7 +10,9 @@ export default function Home() {
     <>
     {/* <ComponentMemory/> */}
     {/* <State/> */}
-    <UpdaterFunction/>
+    {/* <UpdaterFunction/> */}
+    <ObjectStateUpdate/>
+
     </>
   )
 }
