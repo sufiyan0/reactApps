@@ -3,7 +3,10 @@ import ComponentMemory from './components/ComponentMemory'
 import ObjectStateUpdate from './components/ObjectStateUpdate'
 // import State from './components/State'
 import  UpdaterFunction from './components/UpdaterFunction'
-
+import {NastedState} from './components/StateObject'
+import StateObject from './components/StateObject'
+import StateArrayUpdate from './components/StateArrayUpdate'
+import ShapeEditor from './components/ShapeEditor'
 
 export default function Home() {
   return (
@@ -11,7 +14,13 @@ export default function Home() {
     {/* <ComponentMemory/> */}
     {/* <State/> */}
     {/* <UpdaterFunction/> */}
-    <ObjectStateUpdate/>
+    {/* <ObjectStateUpdate/> */}
+    {/* <StateObject/> */}
+    <br/>
+    {/* <NastedState/> */}
+    {/* <StateArrayUpdate/> */}
+    <ShapeEditor/>
+    
 
     </>
   )

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function MovingDot() {
+export default function ObjectStateUpdate() {
   const [position, setPosition] = useState({
     x: 0,
     y: 0,
