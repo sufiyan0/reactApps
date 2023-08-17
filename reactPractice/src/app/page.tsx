@@ -7,6 +7,8 @@ import {NastedState} from './components/StateObject'
 import StateObject from './components/StateObject'
 import StateArrayUpdate from './components/StateArrayUpdate'
 import ShapeEditor from './components/ShapeEditor'
+import BucketList from './components/BucketList'
+import Form from './components/Form'
 
 export default function Home() {
   return (
@@ -19,7 +21,9 @@ export default function Home() {
     <br/>
     {/* <NastedState/> */}
     {/* <StateArrayUpdate/> */}
-    <ShapeEditor/>
+    {/* <ShapeEditor/> */}
+    {/* <BucketList/>/ */}
+    <Form/>
     
 
     </>
