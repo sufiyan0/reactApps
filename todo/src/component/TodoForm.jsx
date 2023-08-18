@@ -1,13 +1,22 @@
 import React,{useState} from 'react'
 
-const TodoForm = () => {
-    const [value , setValue] = useState('')
+const TodoForm = ({addTodo}) => {
+    const [value , setValue] = useState('');
+   
+    function handelSubmint (e) {
+        e.preventDefault()
+        addTodo(value)
+
+        setValue('')
+
+    }
+
 
   return (
     <div>
-        <form action="#">
-            <input type="text" value={value} onChange={(e) => setValue( e.target.value) }/>
-            <button>Add Todo</button>
+        <form className='TodoForm'  onSubmit={handelSubmint}>
+            <input type="text" className='todo-input' value={value} onChange={(e) => setValue( e.target.value) }/>
+            <button type='submit' className='todo-btn'>Add Todo</button>
             
         </form>
 
