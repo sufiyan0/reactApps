@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
-const EditTodoForm = ({editForm,task}) => {
+const TodoEditor = ({editForm,task}) => {
   
-  var [value, setValue] = useState('');
+  var [value, setValue] = useState(task.task);
  
   function handelSubmint(e) {
     e.preventDefault();
@@ -10,7 +10,7 @@ const EditTodoForm = ({editForm,task}) => {
     editForm(value,task.id);
    
 
-    setValue('');
+    // setValue('');
   }
 
  
@@ -26,4 +26,4 @@ const EditTodoForm = ({editForm,task}) => {
   )
 }
 
-export default EditTodoForm
+export default TodoEditor
