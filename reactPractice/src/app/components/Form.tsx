@@ -61,8 +61,7 @@ function submitForm(answer: any) {
       let shouldError = answer.toLowerCase() !== "lima";
       if (shouldError) {
         reject(new Error("Good guess but a wrong answer. Try again!"));
-        // setStatus('error')
-
+        // setStatus('error');
       } else {
         resolve("success");
       }
