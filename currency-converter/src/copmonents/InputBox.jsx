@@ -2,33 +2,37 @@ import React from "react";
 
 const InputBox = ({
   label,
-  ammount ,
+  ammount,
   onAmoutChange,
   onCurrencyChange,
   currencyOptipons = [],
-  selectCurrency = "usd"
-  
+  selectedCurrency,
 }) => {
   // console.log(currencyOptipons)
   return (
-    <div className=" w-full h-1/3 flex  justify-center items-center bg-gray-200 rounded">
-       <div className="">
-        <label htmlFor="test">{label}</label>
+    <div className=" w-full flex  justify-center items-center bg-gray-200 p-5 rounded">
+      <div className="flex flex-col m-2 p-2 mb-4">
+        <label htmlFor="test" className="text-xl py-2">{label}</label>
 
         <input
+          className="border border-gray-300 p-2 rounded"
           type="number"
           value={ammount}
-          // onChange={(e) => onAmoutnChange(e.target.value)}
-          onChange={(e) => onAmoutChange && onAmoutChange(Number(e.target.value))}
+          placeholder="Amount"
+          onChange={(e) =>
+            onAmoutChange && onAmoutChange(Number(e.target.value))
+          }
         />
       </div>
 
-      
-      <div className="">
-        <label htmlFor="">Currency Type</label>
-        <select  name="" id="" 
-        onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
-        // value={selectCurrency}
+      <div className="flex flex-col m-2 p-2 ">
+        <label htmlFor="" className="text-xl py-2">Currency Type</label>
+        <select
+          className="border border-gray-300 p-2 rounded"
+          name=""
+          id=""
+          value={selectedCurrency}
+          onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
         >
           {currencyOptipons.map((currency) => (
             <option key={currency} value={currency}>
@@ -37,12 +41,8 @@ const InputBox = ({
           ))}
         </select>
       </div>
-
-     
     </div>
   );
 };
 
 export default InputBox;
-
-
