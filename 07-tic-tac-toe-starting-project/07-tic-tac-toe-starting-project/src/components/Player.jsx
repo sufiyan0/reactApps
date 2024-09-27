@@ -1,11 +1,16 @@
 import React,{ useState } from "react";
+import { isElement } from "react-dom/test-utils";
 
-const Player = ({name, symbol}) => {
+const Player = ({name, symbol, isActive, onNameChange }) => {
     const [playername,setPlayerName] = useState(name);
     const [edit, setEdit] = useState(false);
 
     const handleEdit = () => {
       setEdit((editing) => !editing);
+      if(edit){
+
+        onNameChange(symbol,playername)
+      }
     }
 
     const handelChange = (event) => {
@@ -13,7 +18,7 @@ const Player = ({name, symbol}) => {
     }
   return (
     
-      <li>
+      <li className={isActive ? 'active' : undefined}>
         <span className="player">
         {
           edit ? <input type="text" value={playername} required onChange={handelChange}/> :

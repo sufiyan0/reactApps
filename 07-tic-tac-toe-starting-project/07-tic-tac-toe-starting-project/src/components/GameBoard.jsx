@@ -1,19 +1,21 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 const initialGameBoard = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
 ];
+const GameBoard = ({onSelectSquare , board}) => {
 
-const GameBoard = () => {
   return (
     <ol id="game-board">
-      {initialGameBoard.map((row, index) => (
-        <li key={index}>
+      {board.map((row, rowIndex) => (
+        <li key={rowIndex}>
           <ol>
-            {row.map((playerSybol, index) => (
-              <li key={index}>
-                <button>{playerSybol}</button>
+            {row.map((playerSybol, colIndex) => (
+              <li key={colIndex}>
+                <button onClick={() => onSelectSquare(rowIndex,colIndex)} disabled={playerSybol !== null}>
+                  {playerSybol}
+                </button>
               </li>
             ))}
           </ol>
